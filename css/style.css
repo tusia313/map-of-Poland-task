@@ -10,6 +10,7 @@ body {
   
   #map-container {
     overflow: hidden;
+    text-align: center;
   }
   
   #poland-map {
