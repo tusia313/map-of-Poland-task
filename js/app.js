@@ -1,10 +1,35 @@
 
-const mapOfPoland = document.getElementById('poland-map')
 
-function alertMe() {
-    alert('Kliknięto na mapę Polski!');
-}
-mapOfPoland.addEventListener('click', alertMe)
+$(document).ready(function() {
+    const mapaWojewodztw = {
+      "PLSL": ["Katowice", "Gliwice", "Sosnowiec"],
+      "PLMA": ["Kraków", "Tarnów", "Nowy Sącz"],
+      "PLPK": ["Rzeszów", "Przemyśl", "Tarnobrzeg"],
+      "PLDS": ["Wrocław", "Legnica", "Jelenia Góra"],
+      "PLOP": ["Opole", "Nysa", "Kędzierzyn-Koźle"],
+      "PLPD": ["Białystok", "Łomża", "Suwałki"],
+      "PLWN": ["Olsztyn", "Elbląg", "Ełk"],
+      "PLLB": ["Zielona Góra", "Gorzów Wielkopolski", "Nowa Sól"],
+      "PLZP": ["Szczecin", "Koszalin", "Świnoujście"],
+      "PLLU": ["Lublin", "Zamość", "Chełm"],
+      "PLPM": ["Gdańsk", "Gdynia", "Sopot"],
+      "PLMZ": ["Warszawa", "Radom", "Płock"],
+      "PLLD": ["Łódź", "Piotrków Trybunalski", "Pabianice"],
+      "PLKP": ["Bydgoszcz", "Toruń", "Włocławek"],
+      "PLWP": ["Poznań", "Kalisz", "Konin"],
+      "PLSK": ["Kielce", "Ostrowiec Świętokrzyski", "Sandomierz"]
+    };
   
+    // Obsługa kliknięcia na województwo
+    $('path').on('click', function() {
+      const wojewodztwoId = $(this).attr('id');
+      const najwiekszeMiasta = mapaWojewodztw[wojewodztwoId];
   
+      if (najwiekszeMiasta) {
+        alert(`Największe miasta w ${wojewodztwoId}: ${najwiekszeMiasta.join(', ')}`);
+      } else {
+        alert(`Brak informacji o miastach w ${wojewodztwoId}`);
+      }
+    });
+  });
   
