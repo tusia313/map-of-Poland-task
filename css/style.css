@@ -1,11 +1,25 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   background-color: #f0f0f0;
 }
 
+h2 {
+  color: rgba(128, 128, 128, 0.6);
+}
 
+#map-container {
+  text-align: center; /* Dodaj centrowanie dla elementów inline */
+  width: 100%;
+  height: 100%;
+}
+
+#poland-map path:hover {
+  fill: rgb(28, 252, 0);
+  cursor: pointer;
+}
