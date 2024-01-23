@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
     const mapaWojewodztw = {
+        // wiadomo, nazwy wojewódzctw są do zmian, ale mi się już nie chciało
       "PLSL": ["Katowice", "Gliwice", "Sosnowiec"],
       "PLMA": ["Kraków", "Tarnów", "Nowy Sącz"],
       "PLPK": ["Rzeszów", "Przemyśl", "Tarnobrzeg"],

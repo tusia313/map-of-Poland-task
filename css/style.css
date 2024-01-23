@@ -19,6 +19,16 @@ h2 {
   height: 100%;
 }
 
+#poland-map {
+  fill: white;
+  height: 90vh;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.5;
+  width: auto;
+}
+
 #poland-map path:hover {
   fill: rgb(28, 252, 0);
   cursor: pointer;
